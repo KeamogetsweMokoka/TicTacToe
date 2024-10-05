@@ -1,0 +1,26 @@
+#gameContainer{
+    font-family:  "Permanent Marker", cursive, 'sans-serif';
+    text-align: center;
+}
+#cellContainer{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    margin: auto;
+}
+.cell{
+    width: 75px;
+    height: 75px;
+    border: 2px solid rgb(61, 192, 236);
+    box-shadow: 0 0 0 2px;
+    box-shadow: blue;
+    line-height: 75px; 
+    font-size: 50px;
+    cursor: pointer;
+}
+
+button{
+    padding: 10px;
+    margin: 30px;
+    cursor: pointer;
+}
