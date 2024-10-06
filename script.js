@@ -1,3 +1,9 @@
+let playerXScore = 0; 
+let playerOScore = 0; 
+let drawScore = 0; 
+const playerXScoreText = document.querySelector("#playerXScore");
+const playerOScoreText = document.querySelector("#playerOScore");
+const drawScoreText = document.querySelector("#drawScore");
 const cells= document.querySelectorAll(".cell");
 const statusText = document.querySelector("#statusText");
 const restartBtn = document.querySelector("#restartBtn");
@@ -12,7 +18,7 @@ const winConditions = [
     [2, 5, 8]
 ]; 
 let options = ["", "", "", "", "", "", "", "", ""];
-let currentPlayer = "X"; 
+let currentPlayer = "X";  // something with this needs to change ! dont know what tho :-*|
 let running = false; 
 
 initializeGame(); 
@@ -54,6 +60,11 @@ function checkWinner(){
         if(cellA == "" || cellB == "" || cellC == ""){
             continue; 
         }
+
+        if(cellA == "" || cellB == "" || cellC == ""){
+            continue; 
+        }
+
         if(cellA == cellB && cellB == cellC){
             roundWon = true;
             break; 
@@ -63,15 +74,28 @@ function checkWinner(){
     if(roundWon){
         statusText.textContent = `${currentPlayer} wins!`;
         running = false;
+
+    if(currentPlayer == "X"){
+        playerXScore++; 
+        playerXScoreText.textContent = playerXScore;
     }
+    else{
+        playerOScore++; 
+        playerOScoreText.textContent = playerOScore; 
+    }
+}
     else if(!options.includes("")){
-        statusText.textContent = `Draw!`;
-        running = false;
+        statusText.textContent = `Draw!`; 
+        running = false; 
+        drawScore++; 
+        drawScoreText.textContent = drawScore; 
     }
+
     else{
         changePlayer();
     }
 }
+
 function restartGame(){
     currentPlayer = "X"; 
     options = ["", "", "", "", "", "", "", "", ""];
@@ -79,6 +103,3 @@ function restartGame(){
     cells.forEach(cell => cell.textContent = ""); 
     running = true; 
 }
-
-
-// This is for the score card
