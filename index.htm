@@ -12,8 +12,9 @@
         <H1><u>TicTacToe The Game</u></H1>
         <div id="scoreCard">
             <h2>Score</h2>
-            <p id="">Player X: 0</p>  <!-- TODO: make the "0" a placeholder-->
-            <p id="">Player Y: 0</p>
+            <p id="score">Player X: <span id="playerXScore">0</span></p>  <!-- TODO: make the "0" a placeholder-->
+            <p id="score">Player O: <span id="playerOScore">0</span></p>   <!--Might need to change between "currentPlayer" and "playerXScore"-->
+            <p id="score">Draw: <span id="drawScore">0</span></p>
         </div>
         <div id="cellContainer">
             <div cellIndex="0" class="cell"></div>
