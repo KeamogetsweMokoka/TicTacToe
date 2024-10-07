@@ -1,6 +1,11 @@
+*{
+    background-color: aliceblue;
+    padding: 5px; 
+    margin: auto;
+}
 #gameContainer{
     font-family:  "Permanent Marker", cursive, 'sans-serif';
-    text-align: center;
+    text-align: center;background-color: aliceblue;
 }
 #cellContainer{
     display: grid;
@@ -11,7 +16,7 @@
 .cell{
     width: 75px;
     height: 75px;
-    border: 2px solid rgb(61, 192, 236);
+    border: 2px solid;
     box-shadow: 0 0 0 2px;
     box-shadow: blue;
     line-height: 75px; 
@@ -24,10 +29,3 @@ button{
     margin: 30px;
     cursor: pointer;
 }
-
-/* #scoreCard{
-    display: flex;
-    border: 1px solid rgb(61, 192, 236); 
-    width: 300px; 
-    height: 100px; 
-} */
